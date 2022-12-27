@@ -57,7 +57,7 @@ const AddNewImage = ({ setShowAddImageModal }: props) => {
 
   return (
     <Modal>
-      <div className="py-4 px-6 text-[#333333]">
+      <div className="py-4 px-6 text-darkgrey">
         <h3 className="font-medium text-[24px] mb-4 ">Add a new photo</h3>
         <form className="" onSubmit={handlePhotoUpload}>
           <label className="block text-sm mb-2" htmlFor="label">
@@ -67,11 +67,11 @@ const AddNewImage = ({ setShowAddImageModal }: props) => {
             type="text"
             placeholder="name of photo"
             id="label"
-            className="w-full rounded-xl py-2 px-4 outline-none border border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D] "
+            className="w-full rounded-xl py-2 px-4 outline-none border border-secondary bg-transparent hover:focus:border-primary "
             {...register("label")}
           />
           {errors?.label && (
-            <p className=" mt-2 mb-1 text-red-500">{errors.label.message}</p>
+            <p className=" mt-2 mb-1 text-danger">{errors.label.message}</p>
           )}
           <label htmlFor="imageurl" className="block text-sm mb-2 mt-4">
             Photo URL
@@ -80,16 +80,16 @@ const AddNewImage = ({ setShowAddImageModal }: props) => {
             type="text"
             placeholder="https://picsum.photos/500/300?random=1"
             id="imageurl"
-            className="w-full rounded-xl py-2 px-4 outline-none border border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D]"
+            className="w-full rounded-xl py-2 px-4 outline-none border border-secondary bg-transparent hover:focus:border-primary"
             {...register("src")}
           />
           {errors?.src && (
-            <p className=" mt-1 mb-2 text-red-500">{errors.src.message}</p>
+            <p className=" mt-1 mb-2 text-danger">{errors.src.message}</p>
           )}
 
           <div className="flex items-center justify-end mt-4 mb-1">
             <Button
-              className="mr-4"
+              className="mr-4 shadow-none font-semibold"
               color="secondary"
               onClick={(e: FormEvent) => {
                 e.preventDefault();

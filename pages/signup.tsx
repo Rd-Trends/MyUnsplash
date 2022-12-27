@@ -79,7 +79,7 @@ const SignUp = () => {
   return (
     <>
       <div className="bg-gray-50 min-h-screen flex items-center justify-center py-12">
-        <div className="bg-white text-[#333333] shadow-xl w-11/12 md:w-5/12 lg:w-4/12 max-w-[400px] flex flex-col items-start py-8 px-4 rounded-lg font-light">
+        <div className="bg-white text-[#333333] shadow-xl w-11/12 md:w-5/12 lg:w-4/12 max-w-[400px] flex flex-col items-start py-8 px-4 rounded-lg font-normal">
           <Logo />
           <p className="w-full mt-2">Register an account with MyUnsplash</p>
           <form onSubmit={handleSignUp} className="w-full mt-4">
@@ -88,12 +88,12 @@ const SignUp = () => {
               <input
                 type="text"
                 placeholder="John_doe"
-                className="w-full rounded-xl py-2 px-4 border outline-none border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D]"
+                className="w-full rounded-xl py-2 px-4 mt-1 border outline-none border-secondary bg-transparent hover:focus:border-primary"
                 {...register("username")}
               />
             </label>
             {errors?.username && (
-              <p className=" -mt-2 mb-2 text-red-500">
+              <p className=" -mt-2 mb-2 text-danger">
                 {errors.username.message}
               </p>
             )}
@@ -102,17 +102,17 @@ const SignUp = () => {
               <input
                 type="email"
                 placeholder="johnDoe@gmail.com"
-                className="w-full rounded-xl py-2 px-4 border outline-none border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D]"
+                className="w-full rounded-xl py-2 px-4 mt-1 border outline-none border-secondary bg-transparent hover:focus:border-primary"
                 {...register("email")}
               />
             </label>
             {errors?.email && (
-              <p className=" -mt-2 mb-2 text-red-500">{errors.email.message}</p>
+              <p className=" -mt-2 mb-2 text-danger">{errors.email.message}</p>
             )}
             <label htmlFor="password" className=" block">
               password
             </label>
-            <div className="w-full rounded-xl border outline-none border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D] flex items-center">
+            <div className="w-full rounded-xl mt-1 border outline-none border-secondary bg-transparent hover:focus:border-primary flex items-center">
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
@@ -131,7 +131,7 @@ const SignUp = () => {
               </button>
             </div>
             {errors?.password && (
-              <p className=" mt-2 mb-2 text-red-500">
+              <p className=" mt-2 mb-2 text-danger">
                 {errors.password.message}
               </p>
             )}
@@ -139,7 +139,7 @@ const SignUp = () => {
               Sign up
             </Button>
             {errors?.customError && (
-              <p className=" mt-2 text-red-500">
+              <p className=" mt-2 text-danger">
                 {errors?.customError?.message}
               </p>
             )}

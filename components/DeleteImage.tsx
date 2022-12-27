@@ -41,9 +41,10 @@ const DeleteImage = ({ setShowDeleteImageModal, id }: props) => {
       console.log(err);
     }
   };
+
   return (
     <Modal>
-      <div className="py-4 px-6 text-[#333333]">
+      <div className="py-4 px-6 text-darkgrey">
         <h3 className="font-medium text-[24px] mb-2 ">Are you sure</h3>
         <div>
           <label className="block text-sm mb-2" htmlFor="password">
@@ -53,18 +54,18 @@ const DeleteImage = ({ setShowDeleteImageModal, id }: props) => {
             type="text"
             placeholder="**************"
             id="password"
-            className="w-full rounded-xl py-2 px-4 border border-[#4F4F4F] outline-none bg-transparent hover:focus:border-[#3DB46D] mb-4"
+            className="w-full rounded-xl py-2 px-4 border border-secondary outline-none bg-transparent hover:focus:border-primary"
             value={password}
             onChange={(e) => {
               if (error) setError("");
               setpassword(e.target.value);
             }}
           />
-          {error && <p className="text-[#EB5757]">{error}</p>}
+          {error && <p className="text-danger mt-2">{error}</p>}
         </div>
-        <div className="flex items-center justify-end mt-2 mb-1">
+        <div className="flex items-center justify-end mt-6 mb-1">
           <Button
-            className="mr-4"
+            className="mr-4 shadow-none"
             color="secondary"
             onClick={() => setShowDeleteImageModal(false)}
           >

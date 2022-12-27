@@ -11,6 +11,7 @@ import useSWR from "swr";
 import { useAtom } from "jotai";
 import { userphotosAtom, filteredUserPhotoAtom } from "../store";
 import PreLoader from "../components/PreLoader";
+import Seo from "../components/Seo";
 
 export default function Home() {
   const [showAddImageModal, setShowAddImageModal] = useState<boolean>(false);
@@ -27,44 +28,23 @@ export default function Home() {
   }, [user, loading, router]);
 
   useEffect(() => {
-    if (photos) {
+    if (photos?.length) {
       setUserPhotos(photos);
     }
   }, [photos]);
 
   if (loading) {
-    return <PreLoader />;
+    return (
+      <>
+        <Seo />
+        <PreLoader />
+      </>
+    );
   }
 
   return (
     <>
-      <Head>
-        <title>Upload your beautiful or favourite images | MyUnsplash</title>
-        <meta
-          name="description"
-          content="Upload the url of your favourite image, and get displayed beautifully!"
-        />
-
-        <meta
-          property="og:url"
-          content="https://myunsplash-trends.vercel.app"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Upload your beautiful or favourite images | MyUnsplash"
-        />
-        <meta
-          property="og:description"
-          content="Upload the url of your favourite image, and get displayed beautifully!"
-        />
-        <meta
-          property="og:image"
-          content="https://myunsplash-trends.vercel.app/og.png"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      </Head>
+      <Seo />
       {user && (
         <div className="bg-white flex flex-col justify-between min-h-screen">
           <main>
@@ -86,11 +66,11 @@ export default function Home() {
             </AnimatePresence>
           </main>
           <footer className="text-center bg-white pt-6 mt-6 pb-4 text-sm">
-            made with <span className="text-[#EB5757]">&hearts;</span> by{" "}
+            made with <span className="text-danger">&hearts;</span> by{" "}
             <a
               href="https://github.com/rd-trends"
               target="_blank"
-              className="text-[#3DB46D]"
+              className="text-primary"
               rel="noreferrer"
             >
               Daniel Ikoyo

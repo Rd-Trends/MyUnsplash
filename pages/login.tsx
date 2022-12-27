@@ -74,8 +74,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="bg-gray-50 text-[#333333]  min-h-screen flex items-center justify-center py-12">
-        <div className="bg-white font-light shadow-xl w-11/12 md:w-5/12 lg:w-4/12 max-w-[400px] flex flex-col items-start py-8 px-4 rounded-lg">
+      <div className="bg-gray-50 text-darkgrey  min-h-screen flex items-center justify-center py-12">
+        <div className="bg-white font-normal shadow-xl w-11/12 md:w-5/12 lg:w-4/12 max-w-[400px] flex flex-col items-start py-8 px-4 rounded-lg">
           <Logo />
           <p className="w-full mt-2">Please sign in into your account</p>
           <form onSubmit={handleLogin} className="w-full mt-6">
@@ -84,17 +84,17 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="johnDoe@gmail.com"
-                className="w-full rounded-xl py-2 px-4 border outline-none border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D]"
+                className="w-full rounded-xl py-2 px-4 mt-1 border outline-none border-secondary bg-transparent hover:focus:border-primary"
                 {...register("email")}
               />
             </label>
             {errors?.email && (
-              <p className=" -mt-2 mb-2 text-red-500">{errors.email.message}</p>
+              <p className=" -mt-2 mb-2 text-danger">{errors.email.message}</p>
             )}
-            <label htmlFor="password" className=" block">
+            <label htmlFor="password" className=" block mb-1">
               password
             </label>
-            <div className="w-full rounded-xl border outline-none border-[#4F4F4F] bg-transparent hover:focus:border-[#3DB46D] flex items-center">
+            <div className="w-full rounded-xl border outline-none border-secondary bg-transparent hover:focus:border-primary flex items-center">
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
@@ -113,7 +113,7 @@ const Login = () => {
               </button>
             </div>
             {errors?.password && (
-              <p className=" mt-2 mb-2 text-red-500">
+              <p className=" mt-2 mb-2 text-danger">
                 {errors.password.message}
               </p>
             )}
@@ -121,7 +121,7 @@ const Login = () => {
               Sign in
             </Button>
             {errors?.customError && (
-              <p className=" mt-2 text-red-500">
+              <p className=" mt-2 text-danger">
                 {errors?.customError?.message}
               </p>
             )}

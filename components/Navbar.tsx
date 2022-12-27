@@ -13,7 +13,7 @@ interface props {
 const Navbar = ({ setShowAddImageModal }: props) => {
   const [search, setSearch] = useAtom(searchAtom);
   return (
-    <nav className="flex bg-white flex-col md:flex-row md:justify-between mx-4 md:mx-[2rem] lg:mx-[5rem] pt-4 md:pt-6">
+    <nav className="flex bg-white flex-col md:flex-row md:justify-between mx-4 md:mx-8 lg:mx-20 pt-4 md:pt-6">
       <div className="flex flex-col md:flex-row">
         <Logo />
         <div className="my-4 md:my-0 flex items-center border-secondary border w-full md:w-[300px] rounded-xl md:ml-8 ">

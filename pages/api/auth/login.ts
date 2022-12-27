@@ -40,7 +40,7 @@ handler.post(async (req: NextApiReq, res: NextApiResponse, next) => {
     _id: user._id,
   };
 
-  res.status(201).json(req.session.user);
+  res.status(200).json(req.session.user);
 });
 
 export default handler;
