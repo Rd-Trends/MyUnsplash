@@ -1,15 +1,15 @@
 # MyUnsplash
 
-[devchallenges.io challeng]("https://devchallenges.io")
+[devchallenges.io challeng](https://devchallenges.io)
 
 ## Made with
 
-- [Nextjs]("https://nextjs.org")
-- [Typescript]("https://www.typescriptlang.org")
+- [Nextjs](https://nextjs.org)
+- [Typescript](https://www.typescriptlang.org)
 - [TailwindCSS](https://tailwindcss.com)
-- [Framer Motion]("https://framer.com/motion")
-- [Jotai - for sate management]("https://jotai.org")
-- [MongoDB]("https://www.mongodb.com")
+- [Framer Motion](https://framer.com/motion)
+- [Jotai - for sate management](https://jotai.org)
+- [MongoDB](https://www.mongodb.com)
 
 ## Features
 
