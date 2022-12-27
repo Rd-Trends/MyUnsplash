@@ -91,6 +91,7 @@ export default function Home() {
               href="https://github.com/rd-trends"
               target="_blank"
               className="text-[#3DB46D]"
+              rel="noreferrer"
             >
               Daniel Ikoyo
             </a>
