@@ -23,7 +23,7 @@
 
 - clone this repository
 - run `npm install`
-- create .env.local file in the root directory and add this two variable  
+- create .env.local file in the root and add this two variable  
   - MONGODB_URI = your mongodb connection url
   - TOKEN_SECRET = your token secret
 - run `npm run dev`

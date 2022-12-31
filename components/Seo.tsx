@@ -24,6 +24,10 @@ const Seo = () => {
         property="og:image"
         content="https://myunsplash-trends.vercel.app/og.png"
       />
+      <meta property="og:image:height" content="566" />
+      <meta property="og:image:width" content="1280" />
+
+      <link rel="icon" type="image/png" href="/devchallenges.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="x-ua-compatible" content="ie=edge" />
     </Head>
