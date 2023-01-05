@@ -17,7 +17,10 @@ const Navbar = ({ setShowAddImageModal }: props) => {
       <div className="flex flex-col md:flex-row">
         <Logo />
         <div className="my-4 md:my-0 flex items-center border-secondary border w-full md:w-[300px] rounded-xl md:ml-8 ">
-          <button className=" bg-transparent border-none outline-none py-3 px-2">
+          <button
+            className=" bg-transparent border-none outline-none py-3 px-2"
+            aria-label="search"
+          >
             <AiOutlineSearch color="#BDBDBD" />
           </button>
           <input

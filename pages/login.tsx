@@ -108,6 +108,7 @@ const Login = () => {
                   e.preventDefault();
                   setShowPassword(!showPassword);
                 }}
+                aria-label="Toggle password vissibility"
               >
                 {showPassword ? <BsEyeSlash /> : <BsEye />}
               </button>

@@ -65,7 +65,7 @@ const DeleteImage = ({ setShowDeleteImageModal, id }: props) => {
         </div>
         <div className="flex items-center justify-end mt-6 mb-1">
           <Button
-            className="mr-4 shadow-none"
+            className="mr-4 shadow-none bg-transparent"
             color="secondary"
             onClick={() => setShowDeleteImageModal(false)}
           >

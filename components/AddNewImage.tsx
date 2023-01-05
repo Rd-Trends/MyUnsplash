@@ -89,7 +89,7 @@ const AddNewImage = ({ setShowAddImageModal }: props) => {
 
           <div className="flex items-center justify-end mt-4 mb-1">
             <Button
-              className="mr-4 shadow-none font-semibold"
+              className="mr-4 shadow-none bg-transparent font-semibold"
               color="secondary"
               onClick={(e: FormEvent) => {
                 e.preventDefault();
